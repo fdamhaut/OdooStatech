@@ -4,3 +4,4 @@ statech.access_item,access_item,statech.model_item,base.group_user,1,1,1,1
 statech.access_item_move,access_item_move,statech.model_item_move,base.group_user,1,1,1,1
 statech.access_machine_tag,access_machine_tag,statech.model_machine_tag,base.group_user,1,1,1,1
 statech.access_machine,access_machine,statech.model_machine,base.group_user,1,1,1,1
+statech.access_item_move_report,access_item_move_report,statech.model_item_move_report,base.group_user,1,1,1,1

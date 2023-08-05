@@ -4,9 +4,9 @@
         <field name="name">Items</field>
         <field name="model">item</field>
         <field name="arch" type="xml">
-            <tree string="Item">
+            <tree string="Items">
                 <field name="name"/>
-                <field name="tags" widget="many2many_tags"/>
+                <field name="tag_ids" widget="many2many_tags"/>
             </tree>
         </field>
      </record>
@@ -15,9 +15,9 @@
         <field name="name">item.search</field>
         <field name="model">item</field>
         <field name="arch" type="xml">
-            <search string="Item">
+            <search string="Search Items">
                 <field name="name"/>
-                <field name="tags"/>
+                <field name="tag_ids"/>
             </search>
         </field>
      </record>

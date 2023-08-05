@@ -11,12 +11,13 @@ class Machine(models.Model):
     _name = 'machine'
 
     name = fields.Char('Name')
-    tags = fields.Many2many('item.tag', string='Tags')
+    tag_ids = fields.Many2many('item.tag', string='Tags')
+    planned = fields.Boolean('Planned', default=False)
 
     overclock = fields.Integer('Overclock')
-    amount = fields.Integer('Amount')
+    amount = fields.Integer('Amount', default=1)
 
     # Recipe
-    input = fields.One2many('item.move', 'machine_input', string='Input')
-    output = fields.One2many('item.move', 'machine_output', string='Output')
+    input_ids = fields.One2many('item.move', 'machine_input', 'Inputs')
+    output_ids = fields.One2many('item.move', 'machine_output', 'Outputs')
     basetime = fields.Integer('Base time')

@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'StatTech',
+    'name': 'StaTech',
     'version': '1.0',
     'category': '',
     'sequence': 1,
@@ -15,6 +15,7 @@
         'views/item.xml',
         'views/item_move.xml',
         'views/machine.xml',
+        'report/item_move_report.xml',
         'views/menu.xml',
     ],
     'application': True,

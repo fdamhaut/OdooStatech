@@ -3,10 +3,10 @@ from odoo import models, fields, api
 class ItemMove(models.Model):
     _name = 'item.move'
 
-    item = fields.Many2one('item', 'Item')
-    amount = fields.Float('Amount')
-    chance = fields.Integer('% Chance')
 
+    item_id = fields.Many2one('item', 'Item')
+    amount = fields.Float('Amount', default=1)
+    chance = fields.Integer('% Chance', default=100)
     machine_input = fields.Many2one('machine', string='Machine')
     machine_output = fields.Many2one('machine', string='Machine')
 
