@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+statech.access_item_tag,access_item_tag,statech.model_item_tag,base.group_user,1,1,1,1
+statech.access_item,access_item,statech.model_item,base.group_user,1,1,1,1
+statech.access_item_move,access_item_move,statech.model_item_move,base.group_user,1,1,1,1
+statech.access_machine_tag,access_machine_tag,statech.model_machine_tag,base.group_user,1,1,1,1
+statech.access_machine,access_machine,statech.model_machine,base.group_user,1,1,1,1

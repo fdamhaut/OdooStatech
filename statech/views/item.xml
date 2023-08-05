@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="item_view" model="ir.ui.view">
+        <field name="name">Items</field>
+        <field name="model">item</field>
+        <field name="arch" type="xml">
+            <tree string="Item">
+                <field name="name"/>
+                <field name="tags" widget="many2many_tags"/>
+            </tree>
+        </field>
+     </record>
+
+     <record id="item_search" model="ir.ui.view">
+        <field name="name">item.search</field>
+        <field name="model">item</field>
+        <field name="arch" type="xml">
+            <search string="Item">
+                <field name="name"/>
+                <field name="tags"/>
+            </search>
+        </field>
+     </record>
+
+    <record id="item_action" model="ir.actions.act_window">
+        <field name="name">Items</field>
+        <field name="res_model">item</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[]</field>
+        <field name="search_view_id" eval='item_search'/>
+    </record>
+</odoo>
