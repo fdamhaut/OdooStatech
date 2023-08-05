@@ -5,12 +5,15 @@
         <field name="arch" type="xml">
             <tree string="Move Breakdown" create="0" delete="0"
                   decoration-danger="net_output &lt; 0"
-                  default_order="item_id"
-                  action="action_open_sale_order" type="object">
+                  decoration-warning="planned_net_output &lt; 0"
+                  default_order="item_id">
                 <field name="item_id"/>
                 <field name="net_output"/>
+                <field name="planned_net_output" optional="hide"/>
                 <field name="gross_output"/>
+                <field name="planned_gross_output" optional="hide"/>
                 <field name="qty_used" optional="hide"/>
+                <field name="planned_qty_used" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -28,7 +31,9 @@
             <graph string="Item Production" type="bar">
                 <field name="item_id" type="col"/>
                 <field name="net_output" string="Net Output" type="measure"/>
+                <field name="planned_net_output" string="Planned Net Output" type="measure"/>
                 <field name="gross_output" string="Gross Output" type="measure"/>
+                <field name="planned_gross_output" string="Planned Gross Output" type="measure"/>
                 <field name="qty_used" string="Quantity Used" type="measure"/>
             </graph>
         </field>
