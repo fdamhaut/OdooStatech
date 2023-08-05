@@ -7,8 +7,8 @@ class ItemMove(models.Model):
     item_id = fields.Many2one('item', 'Item')
     amount = fields.Float('Amount', default=1)
     chance = fields.Integer('% Chance', default=100)
-    machine_input = fields.Many2one('machine', string='Machine')
-    machine_output = fields.Many2one('machine', string='Machine')
+    machine_input_id = fields.Many2one('machine', string='Machine')
+    machine_output_id = fields.Many2one('machine', string='Machine')
 
     # Computed
     real_amount = fields.Float(compute='_compute_real_amount', store=True)

@@ -16,8 +16,8 @@ class ItemUsageReport(models.Model):
         return """
         item_io AS (
             SELECT  item_id,
-                    real_amount * (machine_input IS NOT NULL)::int AS input,
-                    real_amount * (machine_output IS NOT NULL)::int AS output
+                    real_amount * (machine_input_id IS NOT NULL)::int AS input,
+                    real_amount * (machine_output_id IS NOT NULL)::int AS output
             FROM item_move
         )
         """
