@@ -17,6 +17,6 @@ class Machine(models.Model):
     amount = fields.Integer('Amount')
 
     # Recipe
-    input = fields.Many2one('item.move', 'Input')
-    output = fields.Many2one('item.move', 'Output')
+    input = fields.One2many('item.move', 'machine_input', string='Input')
+    output = fields.One2many('item.move', 'machine_output', string='Output')
     basetime = fields.Integer('Base time')

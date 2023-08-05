@@ -5,7 +5,6 @@
     <menuitem id="statech_root" name="Statech" sequence="1" web_icon=""/>
     <menuitem action="item_action" id="menu_item" name="Items" parent="statech_root" sequence="5"/>
     <menuitem action="machine_action" id="menu_machine" name="Machine" parent="statech_root" sequence="6"/>
-
-<!--    <menuitem id="menu_reporting" name="Reporting" parent="statech_root" sequence="7"/>-->
+    <menuitem action="item_move_report_action" id="menu_reporting" name="Reporting" parent="statech_root" sequence="7"/>
 
 </odoo>
