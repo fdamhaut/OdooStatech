@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="product_uom_category_bucket" model="uom.category">
+        <field name="name">Bucket</field>
+    </record>
+
+    <record id="product_uom_millibucket" model="uom.uom">
+        <field name="category_id" ref="product_uom_category_bucket"/>
+        <field name="name">Millibuckets</field>
+        <field name="factor" eval="1.0"/>
+        <field name="uom_type">reference</field>
+    </record>
+
+    <record id="product_uom_bucket" model="uom.uom">
+        <field name="category_id" ref="product_uom_category_bucket"/>
+        <field name="name">Buckets</field>
+        <field name="factor_inv" eval="1000"/>
+        <field name="uom_type">bigger</field>
+    </record>
+</odoo>
