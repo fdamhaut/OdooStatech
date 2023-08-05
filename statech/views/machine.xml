@@ -28,6 +28,9 @@
                     <group>
                         <field name="tag_ids" widget="many2many_tags"/>
                         <field name="amount"/>
+                        <field name="base_cost"/>
+                        <field name="base_time"/>
+                        <field name="overclock"/>
                     </group>
                     <group>
                         <field name="input_ids">

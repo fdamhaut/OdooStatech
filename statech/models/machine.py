@@ -14,13 +14,14 @@ class Machine(models.Model):
     tag_ids = fields.Many2many('item.tag', string='Tags')
     planned = fields.Boolean('Planned', default=False)
 
-    overclock = fields.Integer('Overclock')
+    overclock = fields.Integer('Overclock', default=32)
     amount = fields.Integer('Amount', default=1)
 
     # Recipe
     input_ids = fields.One2many('item.move', 'machine_input_id', 'Inputs')
     output_ids = fields.One2many('item.move', 'machine_output_id', 'Outputs')
-    basetime = fields.Integer('Base time')
+    base_time = fields.Integer('Base time (s)', default=5)
+    base_cost = fields.Integer('Base Time (EU/t)', default=8)
 
     input_ids_str = fields.Char(compute='_compute_input_ids_str', string='Inputs')
     output_ids_str = fields.Char(compute='_compute_output_ids_str', string='Outputs')
