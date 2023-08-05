@@ -8,8 +8,8 @@
                 <field name="name"/>
                 <field name="tag_ids" widget="many2many_tags"/>
                 <field name="amount"/>
-                <field name="input_ids"/>
-                <field name="output_ids"/>
+                <field name="input_ids_str"/>
+                <field name="output_ids_str"/>
             </tree>
         </field>
      </record>
